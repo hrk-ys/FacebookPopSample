@@ -12,11 +12,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
 @property (weak, nonatomic) IBOutlet UILabel *label3;
+@property (weak, nonatomic) IBOutlet UILabel *label4;
+@property (weak, nonatomic) IBOutlet UILabel *label5;
 
+@property (weak, nonatomic) IBOutlet UILabel *label6;
 
-@property (weak, nonatomic) IBOutlet UILabel *labelA;
-@property (weak, nonatomic) IBOutlet UILabel *labelB;
-
+@property (nonatomic) NSArray* labels;
 @end
 
 @implementation ViewController
@@ -26,6 +27,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+
+    _labels = @[_label1, _label2, _label3, _label4, _label5];
     
     
 }
@@ -38,47 +41,27 @@
 }
 - (IBAction)start:(id)sender {
     
-    POPSpringAnimation *anim1 = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerBounds];
-    anim1.toValue = [NSValue valueWithCGRect:CGRectMake(80, 200, 45, 45)];
-    [_label1.layer pop_addAnimation:anim1 forKey:@"myKey"];
+    NSArray* timings = @[ kCAMediaTimingFunctionDefault, kCAMediaTimingFunctionLinear, kCAMediaTimingFunctionEaseIn, kCAMediaTimingFunctionEaseOut, kCAMediaTimingFunctionEaseInEaseOut ];
+    [timings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        UILabel* label = _labels[idx];
 
-    POPDecayAnimation *anim2 = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
-    anim2.velocity = @(400.);
-    [_label2.layer pop_addAnimation:anim2 forKey:@"slide"];
+        POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+        anim.timingFunction = [CAMediaTimingFunction functionWithName:obj];
+        anim.fromValue = @(44.0);
+        anim.toValue = @(280.0 + CGRectGetWidth(label.frame) / 2.0f);
+        [label pop_addAnimation:anim forKey:@"slide"];
+        anim.duration = 0.8f;
+    }];
+
+    POPDecayAnimation* anim = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+    anim.fromValue = @(44.0);
+    anim.velocity = @(280.0 *2 + CGRectGetWidth(_label6.frame) / 2.0f);
+    [_label6 pop_addAnimation:anim forKey:@"slide"];
     
-    POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
-    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    anim.fromValue = @(1.0);
-    anim.toValue = @(0.0);
-    [_label3 pop_addAnimation:anim forKey:@"fade"];
     
-    
-    [UIView animateKeyframesWithDuration:1.5
-                                   delay:0
-                                 options:UIViewAnimationOptionCurveEaseOut
-                              animations:^{
-                                  _labelA.frame = CGRectOffset(_labelA.frame, 160, 0);
-                              }
-                              completion:nil];
-    
-    [UIView animateWithDuration:1.0f
-                     animations:^{
-                         _labelB.frame = CGRectOffset(_labelB.frame, 160, 0);
-                     }];
-
-}
-- (IBAction)reset:(id)sender {
-
-    _label1.frame = CGRectMake(20, 20, 100, 21);
-
-    _label2.frame = CGRectMake(20, 49, 100, 21);
-
-    _label3.alpha = 1.0f;
-    
-    _labelA.frame = CGRectMake(20, 273, 100, 21);
-
-    _labelB.frame = CGRectMake(20, 302, 100, 21);
-
+    POPAnimationTracer *tracer = anim.tracer;
+    tracer.shouldLogAndResetOnCompletion = YES;
+    [tracer start];
 }
 
 
