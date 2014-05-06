@@ -15,17 +15,18 @@
 		E955A6001913F475006885C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E955A5FF1913F475006885C1 /* main.m */; };
 		E955A6041913F475006885C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E955A6031913F475006885C1 /* AppDelegate.m */; };
 		E955A6071913F475006885C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E955A6051913F475006885C1 /* Main.storyboard */; };
-		E955A60A1913F475006885C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E955A6091913F475006885C1 /* ViewController.m */; };
+		E955A60A1913F475006885C1 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E955A6091913F475006885C1 /* BasicViewController.m */; };
 		E955A60C1913F475006885C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E955A60B1913F475006885C1 /* Images.xcassets */; };
 		E955A6131913F475006885C1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E955A6121913F475006885C1 /* XCTest.framework */; };
 		E955A6141913F475006885C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E955A5F31913F475006885C1 /* Foundation.framework */; };
 		E955A6151913F475006885C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E955A5F71913F475006885C1 /* UIKit.framework */; };
 		E955A61D1913F475006885C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E955A61B1913F475006885C1 /* InfoPlist.strings */; };
 		E955A61F1913F475006885C1 /* FacebookPopSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E955A61E1913F475006885C1 /* FacebookPopSampleTests.m */; };
+		E955A62A1917C69E006885C1 /* ButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E955A6291917C69E006885C1 /* ButtonViewController.m */; };
 		E9E348F21917388E00A1747E /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E348F11917388E00A1747E /* Reveal.framework */; };
-		E9E348F519173B1400A1747E /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E348F419173B1400A1747E /* ViewController2.m */; };
-		E9E348F8191761FD00A1747E /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E348F7191761FD00A1747E /* ViewController3.m */; };
-		E9E348FB19177CB200A1747E /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E348FA19177CB200A1747E /* ViewController4.m */; };
+		E9E348F519173B1400A1747E /* SpringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E348F419173B1400A1747E /* SpringViewController.m */; };
+		E9E348F8191761FD00A1747E /* DecayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E348F7191761FD00A1747E /* DecayViewController.m */; };
+		E9E348FB19177CB200A1747E /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E348FA19177CB200A1747E /* CustomViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,21 +53,23 @@
 		E955A6021913F475006885C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E955A6031913F475006885C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E955A6061913F475006885C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E955A6081913F475006885C1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E955A6091913F475006885C1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E955A6081913F475006885C1 /* BasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
+		E955A6091913F475006885C1 /* BasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
 		E955A60B1913F475006885C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E955A6111913F475006885C1 /* FacebookPopSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookPopSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E955A6121913F475006885C1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E955A61A1913F475006885C1 /* FacebookPopSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FacebookPopSampleTests-Info.plist"; sourceTree = "<group>"; };
 		E955A61C1913F475006885C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E955A61E1913F475006885C1 /* FacebookPopSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacebookPopSampleTests.m; sourceTree = "<group>"; };
+		E955A6281917C69E006885C1 /* ButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonViewController.h; sourceTree = "<group>"; };
+		E955A6291917C69E006885C1 /* ButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonViewController.m; sourceTree = "<group>"; };
 		E9E348F11917388E00A1747E /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
-		E9E348F319173B1400A1747E /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
-		E9E348F419173B1400A1747E /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
-		E9E348F6191761FD00A1747E /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
-		E9E348F7191761FD00A1747E /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
-		E9E348F919177CB200A1747E /* ViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
-		E9E348FA19177CB200A1747E /* ViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
+		E9E348F319173B1400A1747E /* SpringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringViewController.h; sourceTree = "<group>"; };
+		E9E348F419173B1400A1747E /* SpringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringViewController.m; sourceTree = "<group>"; };
+		E9E348F6191761FD00A1747E /* DecayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecayViewController.h; sourceTree = "<group>"; };
+		E9E348F7191761FD00A1747E /* DecayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecayViewController.m; sourceTree = "<group>"; };
+		E9E348F919177CB200A1747E /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		E9E348FA19177CB200A1747E /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,14 +137,16 @@
 				E955A6021913F475006885C1 /* AppDelegate.h */,
 				E955A6031913F475006885C1 /* AppDelegate.m */,
 				E955A6051913F475006885C1 /* Main.storyboard */,
-				E955A6081913F475006885C1 /* ViewController.h */,
-				E955A6091913F475006885C1 /* ViewController.m */,
-				E9E348F319173B1400A1747E /* ViewController2.h */,
-				E9E348F419173B1400A1747E /* ViewController2.m */,
-				E9E348F6191761FD00A1747E /* ViewController3.h */,
-				E9E348F7191761FD00A1747E /* ViewController3.m */,
-				E9E348F919177CB200A1747E /* ViewController4.h */,
-				E9E348FA19177CB200A1747E /* ViewController4.m */,
+				E955A6081913F475006885C1 /* BasicViewController.h */,
+				E955A6091913F475006885C1 /* BasicViewController.m */,
+				E9E348F319173B1400A1747E /* SpringViewController.h */,
+				E9E348F419173B1400A1747E /* SpringViewController.m */,
+				E9E348F6191761FD00A1747E /* DecayViewController.h */,
+				E9E348F7191761FD00A1747E /* DecayViewController.m */,
+				E9E348F919177CB200A1747E /* CustomViewController.h */,
+				E9E348FA19177CB200A1747E /* CustomViewController.m */,
+				E955A6281917C69E006885C1 /* ButtonViewController.h */,
+				E955A6291917C69E006885C1 /* ButtonViewController.m */,
 				E955A60B1913F475006885C1 /* Images.xcassets */,
 				E955A5FA1913F475006885C1 /* Supporting Files */,
 			);
@@ -309,12 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E955A60A1913F475006885C1 /* ViewController.m in Sources */,
-				E9E348F519173B1400A1747E /* ViewController2.m in Sources */,
+				E955A60A1913F475006885C1 /* BasicViewController.m in Sources */,
+				E9E348F519173B1400A1747E /* SpringViewController.m in Sources */,
+				E955A62A1917C69E006885C1 /* ButtonViewController.m in Sources */,
 				E955A6041913F475006885C1 /* AppDelegate.m in Sources */,
 				E955A6001913F475006885C1 /* main.m in Sources */,
-				E9E348F8191761FD00A1747E /* ViewController3.m in Sources */,
-				E9E348FB19177CB200A1747E /* ViewController4.m in Sources */,
+				E9E348F8191761FD00A1747E /* DecayViewController.m in Sources */,
+				E9E348FB19177CB200A1747E /* CustomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

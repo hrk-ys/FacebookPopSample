@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Item-->
+        <!--Basic View Controller - Item-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="BasicViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="673" y="-230"/>
         </scene>
-        <!--View Controller4-->
+        <!--Custom View Controller-->
         <scene sceneID="RHD-mx-pli">
             <objects>
-                <viewController id="b8h-4g-j52" customClass="ViewController4" sceneMemberID="viewController">
+                <viewController id="b8h-4g-j52" customClass="CustomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hxr-zd-AMT"/>
                         <viewControllerLayoutGuide type="bottom" id="znq-xH-zR9"/>
@@ -123,12 +123,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAV-1S-X09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="1788"/>
+            <point key="canvasLocation" x="1125" y="860"/>
         </scene>
-        <!--View Controller3 - Item-->
+        <!--Button View Controller-->
+        <scene sceneID="8hN-m0-goQ">
+            <objects>
+                <viewController id="rcC-mW-a5t" customClass="ButtonViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="25O-vA-Nzl"/>
+                        <viewControllerLayoutGuide type="bottom" id="SOe-j4-Sh2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oYk-p8-Wbv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxY-s6-pkq">
+                                <rect key="frame" x="145" y="103" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="tappedCrossButton:" destination="rcC-mW-a5t" eventType="touchUpInside" id="eBS-CI-TnM"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jry-PZ-7Iw">
+                                <rect key="frame" x="137.5" y="173.5" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgD-Sw-3zX">
+                                        <rect key="frame" x="0.0" y="5" width="45" height="3"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lc-Nl-vC0">
+                                        <rect key="frame" x="-0.5" y="20.5" width="45" height="3"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8BP-s3-Mjn">
+                                        <rect key="frame" x="-0.5" y="37.5" width="45" height="3"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KVV-MJ-0Lb" appends="YES" id="K8U-RG-CCe"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnJ-BF-A3N">
+                                <rect key="frame" x="145" y="269" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="tappedCrossButton2:" destination="rcC-mW-a5t" eventType="touchUpInside" id="GDo-Ne-BFQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0wl-9x-M17"/>
+                    <connections>
+                        <outlet property="menuBar1" destination="dgD-Sw-3zX" id="xiv-WK-pJD"/>
+                        <outlet property="menuBar2" destination="3lc-Nl-vC0" id="0ym-iy-rmn"/>
+                        <outlet property="menuBar3" destination="8BP-s3-Mjn" id="Bja-ws-guv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHN-77-x0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KVV-MJ-0Lb">
+                    <connections>
+                        <action selector="tappedMenuView:" destination="rcC-mW-a5t" id="sz0-ta-yav"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="705" y="1256"/>
+        </scene>
+        <!--Decay View Controller - Item-->
         <scene sceneID="OpI-BR-vPS">
             <objects>
-                <viewController id="AJo-WI-EVC" customClass="ViewController3" sceneMemberID="viewController">
+                <viewController id="AJo-WI-EVC" customClass="DecayViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mYO-6K-Vw6"/>
                         <viewControllerLayoutGuide type="bottom" id="Owt-RD-wY5"/>
@@ -177,12 +252,11 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="673" y="1111"/>
+            <point key="canvasLocation" x="1581" y="560"/>
         </scene>
         <!--Table View Controller - Root View Controller-->
         <scene sceneID="9pM-ZS-mcP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vlJ-Bb-j1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="GpS-pA-mcn" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xXR-ZU-n3S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -271,6 +345,26 @@
                                             <segue destination="b8h-4g-j52" kind="push" id="BaY-69-pnF"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="hjO-SG-wsK" style="IBUITableViewCellStyleDefault" id="wcw-EV-ZqK">
+                                        <rect key="frame" x="0.0" y="240" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wcw-EV-ZqK" id="mjI-cx-ZwD">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Button Animation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hjO-SG-wsK">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rcC-mW-a5t" kind="push" id="VZz-d5-bBh"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -281,8 +375,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="YLm-iu-8RB"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vlJ-Bb-j1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157" y="268"/>
+            <point key="canvasLocation" x="153" y="560"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V0E-eM-xXb">
@@ -297,12 +392,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8j4-Wx-nto" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-241" y="268"/>
+            <point key="canvasLocation" x="-285" y="560"/>
         </scene>
-        <!--View Controller2 - Item-->
+        <!--Spring View Controller - Item-->
         <scene sceneID="QBL-8A-Woc">
             <objects>
-                <viewController id="hH4-Ks-qJO" customClass="ViewController2" sceneMemberID="viewController">
+                <viewController id="hH4-Ks-qJO" customClass="SpringViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T8N-KP-yny"/>
                         <viewControllerLayoutGuide type="bottom" id="EkF-9L-e9M"/>
@@ -345,9 +440,12 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="673" y="444"/>
+            <point key="canvasLocation" x="1141" y="148"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cross" width="64" height="64"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

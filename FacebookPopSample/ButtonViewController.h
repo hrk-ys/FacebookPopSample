@@ -1,5 +1,5 @@
 //
-//  ViewController4.h
+//  ButtonViewController.h
 //  FacebookPopSample
 //
 //  Created by Hiroki Yoshifuji on 2014/05/05.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController4 : UIViewController
+@interface ButtonViewController : UIViewController
 
 @end

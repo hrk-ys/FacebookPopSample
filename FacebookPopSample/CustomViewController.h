@@ -1,5 +1,5 @@
 //
-//  ViewController2.h
+//  ViewController4.h
 //  FacebookPopSample
 //
 //  Created by Hiroki Yoshifuji on 2014/05/05.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController2 : UIViewController
+@interface CustomViewController : UIViewController
 
 @end

@@ -1,21 +1,19 @@
 //
-//  ViewController3.m
+//  ViewController4.m
 //  FacebookPopSample
 //
 //  Created by Hiroki Yoshifuji on 2014/05/05.
 //  Copyright (c) 2014年 Hiroki Yoshifuji. All rights reserved.
 //
 
-#import "ViewController3.h"
+#import "CustomViewController.h"
 
-@interface ViewController3 ()
-@property (weak, nonatomic) IBOutlet UIView *outletView;
-@property (weak, nonatomic) IBOutlet UISlider *decelerationSlider;
-@property (weak, nonatomic) IBOutlet UILabel *decelerationLabel;
+@interface CustomViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *label1;
 @end
 
-@implementation ViewController3
+@implementation CustomViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,23 +46,25 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)pan:(UIPanGestureRecognizer*)recognizer {
+- (IBAction)start:(id)sender {
     
-    CGPoint velocity = [recognizer velocityInView:self.view];
+    POPCustomAnimation* anim = [POPCustomAnimation animationWithBlock:^BOOL(id target, POPCustomAnimation *animation) {
+        
+        float t = (animation.currentTime-animation.beginTime);
+
+        UILabel* label = target;
+        
+        CGRect frame = label.frame;
+        frame.origin.x = 20 + t * 280;
+        frame.origin.y = (t<0.5) ? 100 +    t  * 100
+                                 : 100 + (1-t) * 100;
+        label.frame = frame;
+
+        return t < 1.0f;
+    }];
+    [_label1 pop_addAnimation:anim forKey:@"custom"];
     
-    NSLog(@"%@", NSStringFromCGPoint(velocity));
-
-    POPDecayAnimation *positionAnimation = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-    positionAnimation.velocity = [NSNumber numberWithFloat:velocity.y];
-    positionAnimation.deceleration = _decelerationSlider.value;
-
-    [_outletView.layer pop_addAnimation:positionAnimation forKey:@"positionAnimation"];
-
-}
-
-- (IBAction)decelerationSliderValueChange:(id)sender {
-    _decelerationLabel.text = [NSString stringWithFormat:@"%f", _decelerationSlider.value];
+    
 }
 
 @end

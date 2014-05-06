@@ -6,15 +6,15 @@
 //  Copyright (c) 2014年 Hiroki Yoshifuji. All rights reserved.
 //
 
-#import "ViewController2.h"
+#import "SpringViewController.h"
 
-@interface ViewController2 ()
+@interface SpringViewController ()
 @property (weak, nonatomic) IBOutlet UIView *outletView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *seg;
 
 @end
 
-@implementation ViewController2
+@implementation SpringViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

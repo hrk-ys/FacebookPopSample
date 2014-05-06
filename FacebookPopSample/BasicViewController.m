@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 Hiroki Yoshifuji. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BasicViewController.h"
 
-@interface ViewController ()
+@interface BasicViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
 @property (weak, nonatomic) IBOutlet UILabel *label3;
@@ -20,7 +20,7 @@
 @property (nonatomic) NSArray* labels;
 @end
 
-@implementation ViewController
+@implementation BasicViewController
 
 - (void)viewDidLoad
 {
